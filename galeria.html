@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style> 
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            position: relative; 
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        
+        .imagem-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Galeria de Imagens</h1>
+        <p>Abaixo estão algumas imagens de exemplo para ilustrar a galeria:</p>
+
+        <div class="galeria">
+            <div class="imagem-container">
+                <img src="HTML5_Logo_512.png" alt="Logotipo HTML5">
+            </div>
+            <div class="imagem-container">
+                <img src="man-computer.jpg" alt="Homem com computador">
+            </div>
+            <div class="imagem-container">
+                <img src="what-is-html.jpg" alt="Aprendendo HTML">
+            </div>
+        </div>
+
+        <br>
+        <a href="index.html">← Voltar para a página inicial</a>
+    </div>
+
+</body>
+</html>
