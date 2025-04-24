@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Imagens</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de Imagens</h1>
+        <p>Digite uma descrição ou comando para gerar uma imagem (Simulação):</p>
+
+        <div class="form-container">
+            <form action="#" method="post" id="gerar-form">
+                <label for="descricao">Descrição para a Imagem</label>
+                <input type="text" id="descricao" name="descricao" required>
+
+                <button type="submit">Gerar Imagem</button>
+            </form>
+
+            <div class="resultado" id="resultado">
+                
+            </div>
+        </div>
+
+        <br>
+        <a href="index.html">← Voltar para a página inicial</a>
+    </div>
+
+    <script>
+        
+        document.getElementById("gerar-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var descricao = document.getElementById("descricao").value;
+            var resultadoDiv = document.getElementById("resultado");
+
+            
+            if (descricao.trim() !== "") {
+                resultadoDiv.innerHTML = `<p>Imagem gerada com a descrição: <strong>${descricao}</strong></p>`;
+            } else {
+                resultadoDiv.innerHTML = `<p style="color: red;">Por favor, insira uma descrição válida.</p>`;
+            }
+        });
+    </script>
+
+</body>
+</html>
